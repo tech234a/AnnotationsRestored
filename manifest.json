@@ -2,12 +2,13 @@
     "manifest_version": 2,
     "name": "Annotations Restored for YouTube™",
     "short_name": "Annotations Restored",
-    "version": "0.0.2",
+    "version": "0.0.3",
 
     "description": "Brings annotation support back to YouTube™!",
 
     "permissions": [
-        "tabs"
+        "tabs",
+		"storage"
     ],
     "content_scripts": [{
         "matches": ["*://www.youtube.com/watch?*"],
@@ -16,5 +17,8 @@
     }],
     "background": {
         "scripts":["js/background.js"]
-    }
+    },
+	"browser_action": {
+		"default_popup": "html/popup.html"
+	}
 }
