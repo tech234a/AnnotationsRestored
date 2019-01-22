@@ -17,6 +17,9 @@ jobs:
           name: "Install archive all"
           command: pip3 install git-archive-all
       - run:
+           name: "ls"
+           command: "ls"
+      - run:
           name: "Package Extension"
           command: git-archive-all --force-submodules "ext.zip"
       - store_artifacts:
